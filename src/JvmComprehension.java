@@ -3,8 +3,8 @@ public class JvmComprehension {
 
     public static void main(String[] args) { // создается фрейм в стеке
         int i = 1;                      // 1 во фрейме main создается переменная i типа int со значением 1
-        Object o = new Object();        // 2 в heap создается объект object и переменная о во фрейме main , переменная ссылается на object из кучи
-        Integer ii = 2;                 // 3 в heap создается объект integer ii со значением 2 и во фрейме main  создается переменная которая ссылается на на integer из кучи
+        Object o = new Object();        // 2 в heap создается объект object и ссылка во фрейме main на object o из кучи
+        Integer ii = 2;                 // 3 в heap создается объект integer ii со значением 2 и ссылка во фрейме main на integer ii из кучи
         printAll(o, i, ii);             // 4 в stack создается новый фрейм ptintall во время вызова метода, в который входят переменные o. i. ii
         System.out.println("finished"); // 7 в stack создается новый фрейм println, которому передается ссылка на объест finished из heap
     }
